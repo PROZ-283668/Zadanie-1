@@ -1,6 +1,7 @@
 package application;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Class used for login authentication and adding new accounts
@@ -16,7 +17,7 @@ public class LoginLogic
     private DataHandler dataHandler;
 
     /**
-     * 
+     * Sets the dataHandler as a referenceto the dh object. Other fields are set with a default value.
      * @param dh
      *            DataHandler object used with this LoginLogic object.
      */
@@ -80,8 +81,7 @@ public class LoginLogic
     }
 
     /**
-     * Returns List of usernames from selected environment. Omits first username for
-     * testing purposes.
+     * Returns List of usernames from selected environment.
      * 
      * @param key
      *            selected environment name
@@ -97,8 +97,6 @@ public class LoginLogic
 	    {
 		result.add(acc.getUsername());
 	    }
-	    if (!result.isEmpty())
-		result.remove(0);
 	    return result;
 	} else if (key.equals("testing"))
 	{
@@ -106,8 +104,6 @@ public class LoginLogic
 	    {
 		result.add(acc.getUsername());
 	    }
-	    if (!result.isEmpty())
-		result.remove(0);
 	    return result;
 	} else
 	{
@@ -115,8 +111,6 @@ public class LoginLogic
 	    {
 		result.add(acc.getUsername());
 	    }
-	    if (!result.isEmpty())
-		result.remove(0);
 	    return result;
 	}
     }

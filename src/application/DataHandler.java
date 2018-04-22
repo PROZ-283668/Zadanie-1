@@ -16,8 +16,7 @@ public class DataHandler
     private String fileName;
 
     /**
-     * Sets the name of the data storage file. Data itself is either read from file
-     * or passed from different class.
+     * Sets the name of the data storage file. Data itself is read from a text file.
      */
     DataHandler()
     {
